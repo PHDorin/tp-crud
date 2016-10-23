@@ -18,7 +18,6 @@ app.factory('membranes', [
 
 app.controller('MainCtrl', [
 	'$scope',
-	'$stateParams',
 	'membranes',
 	function($scope, membranes){
 		$scope.membranes = membranes.membranes;
@@ -48,9 +47,7 @@ function($stateProvider, $urlRouterProvider) {
       controller: 'MainCtrl',
       resolve: {
       	membranePromise: ['membranes',function(membranes){
-      		var o = membranes.getAll();
-      		console.log("found "+o.membranes);
-      		return o;
+      		return membranes.getAll();
       	}]
       }
     });

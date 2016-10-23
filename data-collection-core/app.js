@@ -5,7 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var db = require('./model/db'); //mongoose
+var membrane = require('./model/membranes'); //membrane model
+
 var routes = require('./routes/index');
+var membranes = require('./routes/membranes')
 var users = require('./routes/users');
 
 var app = express();
@@ -23,6 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/membranes', membranes);
 app.use('/users', users);
 
 // catch 404 and forward to error handler

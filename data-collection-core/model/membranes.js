@@ -2,9 +2,7 @@ var mongoose = require('mongoose')
 var membraneSchema = new mongoose.Schema({
 	//old_membrane_id: String,
 	membrane_id: String,
-	cast_date: Number
-/*
-	,
+	cast_date: Number,
 	formulation: String,
 	polymer1_description: String,
 	polymer2_description: String,
@@ -30,7 +28,7 @@ var membraneSchema = new mongoose.Schema({
 	shear_rate: Number,
 	dope_filtered: Boolean,
 	solvent_system: String,
-	solvent_ration: String,
+	solvent_ratio: String,
 	evap_time_sec: String,
 	support: String,
 	gate_height: String;
@@ -43,6 +41,5 @@ var membraneSchema = new mongoose.Schema({
 	airflow: String,
 	visual_eval_and_cast_notes: String,
 	date_pgnum_booknum: String
-	*/
 });
 mongoose.model('Membrane', membraneSchema);
