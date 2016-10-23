@@ -31,7 +31,7 @@ var membraneSchema = new mongoose.Schema({
 	solvent_ratio: String,
 	evap_time_sec: String,
 	support: String,
-	gate_height: String;
+	gate_height: String,
 	coag_bath_change: Boolean,
 	coag_bath_temp_C: Number,
 	coag_bath_time_minutes: Number,
